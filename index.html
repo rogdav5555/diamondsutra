@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Diamond Sutra</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#chapters">Chapters</a>
+                <a href="#download">Download</a>
+            </div>
+            <button class="burger-menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>The Diamond Sutra</h1>
+            <p class="subtitle">Salutations! Hold close to your heart and mind, my friend.</p>
+            <div class="scroll-indicator" data-target="#chapters">↓</div>
+        </section>
+
+        <section id="chapters" class="content-section">
+            <h2>Chapters</h2>
+            <div class="chapters-grid">
+                <div class="chapter-card">
+                    <h3>Chapter 1</h3>
+                    <p>This is what I heard...</p>
+                    <a href="#chapter1" class="read-more">Read More</a>
+                </div>
+                <!-- Additional chapter cards will be added via JavaScript -->
+            </div>
+        </section>
+
+        <section id="download" class="content-section">
+            <h2>Download the Sutra</h2>
+            <div class="download-container">
+                <div class="download-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Complete Diamond Sutra</h3>
+                    <p>Download all 32 chapters in PDF format</p>
+                    <button class="download-btn" id="downloadPdf">
+                        <i class="fas fa-download"></i> Download PDF
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for chapter content -->
+    <div class="modal" id="chapterModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+            <div class="modal-navigation">
+                <button id="prevChapter" class="nav-btn" aria-label="Previous chapter">&larr;</button>
+                <button id="nextChapter" class="nav-btn" aria-label="Next chapter">&rarr;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>The End.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
