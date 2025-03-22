@@ -168,14 +168,28 @@ nav a:hover {
     align-items: center;
     text-align: center;
     background: linear-gradient(rgba(212, 229, 224, 0.85), rgba(212, 229, 224, 0.85)),
-                url('big-buddha.png') center/cover;
+                url('big-buddha.png') center/cover no-repeat;
     background-attachment: fixed;
     padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+    }
 }
 
 @media (max-width: 768px) {
     .hero {
         background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
     }
 }
 
